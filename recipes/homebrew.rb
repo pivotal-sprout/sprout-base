@@ -1,5 +1,5 @@
-include_recipe "sprout-osx-base::user_owns_usr_local"
-include_recipe "sprout-osx-base::bash_it"
+include_recipe "sprout-base::user_owns_usr_local"
+include_recipe "sprout-base::bash_it"
 
 # Do not be tempted to use the git-resource to check out
 # homebrew directly into /usr/local; it will fail if

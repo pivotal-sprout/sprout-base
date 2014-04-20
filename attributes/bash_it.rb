@@ -1,4 +1,4 @@
-include_attribute "sprout-osx-base::home"
+include_attribute "sprout-base::home"
 
 node.default['bash_it'] ={
   'enabled_plugins' => {
@@ -7,7 +7,7 @@ node.default['bash_it'] ={
     'plugins'    => %w[ssh]
   },
   'custom_plugins' => {
-      "sprout-osx-base" => %w[
+      "sprout-base" => %w[
         bash_it/custom/disable_ctrl-s_output_control.bash
         bash_it/custom/enable_ctrl-o_history_execution.bash
         bash_it/custom/ensure_usr_local_bin_first.bash

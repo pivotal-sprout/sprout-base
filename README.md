@@ -1,3 +1,3 @@
-sprout-osx-base
+sprout-base
 ===============
 A handful of things every Sprout recipe needs.
