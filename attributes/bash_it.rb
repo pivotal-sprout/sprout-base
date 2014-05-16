@@ -1,6 +1,7 @@
 include_attribute "sprout-base::home"
 
 node.default['bash_it'] ={
+  'enabled' => true,
   'enabled_plugins' => {
     'aliases'    => %w[general],
     'completion' => %w[defaults git],

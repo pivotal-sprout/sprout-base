@@ -1,5 +1,7 @@
 include_recipe "sprout-base::user_owns_usr_local"
-include_recipe "sprout-base::bash_it"
+if node['bash_it']['enabled']
+  include_recipe "sprout-base::bash_it"
+end
 
 # Do not be tempted to use the git-resource to check out
 # homebrew directly into /usr/local; it will fail if
