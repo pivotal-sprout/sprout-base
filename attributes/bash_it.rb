@@ -1,4 +1,6 @@
-include_attribute "sprout-base::home"
+include_attribute 'sprout-base::home'
+
+p node['sprout']['home']
 
 node.default['bash_it'] ={
   'enabled_plugins' => {
