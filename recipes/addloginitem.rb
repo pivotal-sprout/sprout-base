@@ -7,7 +7,7 @@ unless File.exists?(addloginitem_path)
   remote_file addloginitem_path do
     source "https://github.com/downloads/pivotalexperimental/addLoginItem/addLoginItem"
     mode '0755'
-    owner node['current_user']
+    owner node['sprout']['user']
   end
 
   ruby_block "test to see if addloginitem was installed" do

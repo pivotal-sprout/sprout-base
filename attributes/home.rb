@@ -1,1 +1,1 @@
-node.default['sprout']['home'] =  node['etc']['passwd'][node['current_user']]['dir']
+node.default['sprout']['home'] =  node['etc']['passwd'][node['sprout']['user']]

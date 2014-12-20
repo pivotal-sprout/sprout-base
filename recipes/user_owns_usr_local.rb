@@ -1,8 +1,8 @@
 directory "/usr/local/bin" do
-  owner node['current_user']
+  owner node['sprout']['user']
   recursive true
 end
 
 execute "your current user owns /usr/local" do
-  command "chown -R #{node['current_user']} /usr/local"
+  command "chown -R #{node['sprout']['user']} /usr/local"
 end
