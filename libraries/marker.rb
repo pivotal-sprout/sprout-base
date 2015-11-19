@@ -1,6 +1,6 @@
 class Chef::Recipe
 
-  MARKER_DIR = "#{ENV['HOME']}/.install_markers"
+  MARKER_DIR = "#{ENV['HOME']}/.install_markers" unless const_defined?(:MARKER_DIR)
 
   #Regarding marker files:
   #
