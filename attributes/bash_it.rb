@@ -1,6 +1,6 @@
 include_attribute 'sprout-base::home'
 
-p node['sprout']['home']
+Chef::Log.info(node['sprout']['home'])
 
 node.default['bash_it'] ={
   'enabled_plugins' => {
