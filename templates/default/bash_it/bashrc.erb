@@ -6,5 +6,12 @@ export BASH_IT="<%= node["bash_it"]["dir"] %>"
 # Lock and Load a custom theme file
 export BASH_IT_THEME="<%= node["bash_it"]["theme"] %>"
 
+# enable user/pair initials in git prompt
+export SCM_GIT_SHOW_CURRENT_USER=true
+
+# optionally change prefix and suffix, defaults are below.
+# export SCM_THEME_CURRENT_USER_PREFFIX=' ☺︎ '
+# export SCM_THEME_CURRENT_USER_SUFFIX=' '
+
 # Load Bash It
 source $BASH_IT/bash_it.sh

@@ -13,7 +13,6 @@ node.default['bash_it'] ={
         bash_it/custom/disable_ctrl-s_output_control.bash
         bash_it/custom/enable_ctrl-o_history_execution.bash
         bash_it/custom/ensure_usr_local_dirs_first.bash
-        bash_it/custom/add_user_initials_to_git_prompt_info.bash
       ]
   },
   'theme' => 'bobby',
