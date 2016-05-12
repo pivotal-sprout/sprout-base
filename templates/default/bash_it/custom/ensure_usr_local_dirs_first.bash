@@ -1,18 +1,35 @@
-# Returns the contents of ${PATH} the path passed in ($1) removed
-function path_without() {
-  path_to_remove=$1
-  IFS=':'
-  t=($PATH)
-  unset IFS
-  t=(${t[@]%%*${path_to_remove}*})
-  IFS=':'
-  echo "${t[*]}"
-  unset IFS
+function reorder_bin_paths() {
+  NEW_PATH=()
+
+  # Split path on colon
+  IFS=":" PATH_BITS=($PATH)
+
+  for BIT in "${PATH_BITS[@]}"; do
+    # Do not include /usr/local/sbin or /usr/local/bin in their normal locations
+    if [ "/usr/local/sbin" == "$BIT" ]; then
+      continue
+    fi
+    if [ "/usr/local/bin" == "$BIT" ]; then
+      continue
+    fi
+
+    # Move theme to directly before their /usr/bin and /usr/sbin equivalents
+    if [ "/usr/bin" == "$BIT" ]; then
+      NEW_PATH=("${NEW_PATH[@]}" "/usr/local/bin")
+    fi
+    if [ "/usr/sbin" == "$BIT" ]; then
+      NEW_PATH=("${NEW_PATH[@]}" "/usr/local/sbin")
+    fi
+
+    # Every other item should be in its natural order
+    NEW_PATH=("${NEW_PATH[@]}" $BIT)
+  done
+
+  # Join array on colon
+  IFS=":" echo "${NEW_PATH[*]}"
 }
 
-for usr_local_path in /usr/local/sbin /usr/local/bin
-do
-  export PATH=${usr_local_path}:`path_without ${usr_local_path}`
-done
+export PATH
+PATH=$(reorder_bin_paths)
 
-unset path_without
+unset reorder_bin_paths
