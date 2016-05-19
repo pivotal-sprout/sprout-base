@@ -4,5 +4,5 @@ task default: %w(foodcritic)
 
 desc 'Run foodcritic'
 task :foodcritic do
-  sh 'foodcritic . -f any -f ~FC017 -f ~FC048'
+  sh 'foodcritic . -f any'
 end

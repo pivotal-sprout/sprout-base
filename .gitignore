@@ -1,5 +1,6 @@
-Cheffile.lock
-tmp/
-cookbooks/
 .idea/
 .librarian/
+tmp/
+cookbooks/
+Cheffile.lock
+Gemfile.lock
