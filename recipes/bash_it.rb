@@ -1,4 +1,4 @@
-bash_it_version = version_string_for('bash_it')
+bash_it_version = node['versions']['bash_it']
 
 git "#{Chef::Config[:file_cache_path]}/bash_it" do
   repository node['bash_it']['repository']
