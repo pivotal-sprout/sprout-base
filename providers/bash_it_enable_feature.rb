@@ -1,3 +1,5 @@
+use_inline_resources # see http://www.foodcritic.io/#FC017
+
 action :create do
   type, name  = new_resource.name.split("/")
 
