@@ -4,7 +4,7 @@ maintainer_email 'sprout-maintainers@googlegroups.com'
 license 'MIT'
 description 'A handful of things every Sprout recipe needs'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version '0.4.0'
+version '0.5.0'
 supports 'mac_os_x'
 depends 'homebrew'
 
