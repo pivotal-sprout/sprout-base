@@ -9,7 +9,7 @@ end
 
 directory node['bash_it']['dir'] do
   owner node['sprout']['user']
-  mode "0777"
+  mode '0777'
 end
 
 execute "Copying bash-it's .git to #{node['bash_it']['dir']}" do
@@ -18,10 +18,10 @@ execute "Copying bash-it's .git to #{node['bash_it']['dir']}" do
 end
 
 template node['bash_it']['bashrc_path'] do
-  source "bash_it/bashrc.erb"
+  source 'bash_it/bashrc.erb'
   cookbook 'sprout-base'
   owner node['sprout']['user']
-  mode "0777"
+  mode '0777'
 end
 
 node['bash_it']['enabled_plugins'].each do |feature_type, features|

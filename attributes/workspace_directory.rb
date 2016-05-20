@@ -1,1 +1,1 @@
-node.default["workspace_directory"]="workspace"
+node.default['workspace_directory'] = 'workspace'
