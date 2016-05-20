@@ -6,6 +6,6 @@ install:
   - export GEM_HOME=tmp/ruby/2.0.0/
   - export PATH=${GEM_HOME}/bin:${PATH}
   - gem install bundler --no-document
-  - bundle install --system
+  - bundle install
 script:
   - bundle exec rake ci
