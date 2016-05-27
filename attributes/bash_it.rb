@@ -2,6 +2,7 @@ include_attribute 'sprout-base::home'
 
 Chef::Log.info(node['sprout']['home'])
 
+node.default['versions']['bash_it'] = 'HEAD'
 node.default['bash_it'] = {
   'enabled_plugins' => {
     'aliases' => %w(general),
