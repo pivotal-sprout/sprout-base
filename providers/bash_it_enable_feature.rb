@@ -1,10 +1,8 @@
-use_inline_resources # see http://www.foodcritic.io/#FC017
-
 action :create do
   type, name = new_resource.name.split('/')
 
   def script_type(type)
-    (type == 'plugins') ? 'plugin' : type
+    type == 'plugins' ? 'plugin' : type
   end
 
   type_dir = ::File.expand_path(type, node['bash_it']['dir'])

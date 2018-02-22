@@ -1,4 +1,6 @@
+.bundle/
 .idea/
+.librarian/
 tmp/
 cookbooks/
 Cheffile.lock

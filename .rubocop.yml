@@ -7,7 +7,7 @@ AllCops:
    - cookbooks/**/*
    - tmp/**/*
 
-Style/SpaceBeforeFirstArg:
+SpaceBeforeFirstArg:
   Enabled: false # Useful for more readable alignment of method call args
 
 LineLength:
