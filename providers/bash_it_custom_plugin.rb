@@ -1,5 +1,3 @@
-use_inline_resources # see http://www.foodcritic.io/#FC017
-
 action :create do
   script_name = ::File.basename(new_resource.source)
   bash_it_custom_dir = ::File.join(node['bash_it']['dir'], 'custom')
