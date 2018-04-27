@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 directory Chef::Config[:file_cache_path] do
   owner 'root'
   group 'admin'

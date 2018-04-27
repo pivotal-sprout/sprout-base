@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 include_attribute 'sprout-base::home'
 
 Chef::Log.info(node['sprout']['home'])

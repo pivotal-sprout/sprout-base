@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Chef
   class Recipe # :nodoc:
     # Chef has a bug (http://tickets.opscode.com/browse/CHEF-1327)

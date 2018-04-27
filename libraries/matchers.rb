@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 if defined?(ChefSpec)
   def enable_bash_it_feature(feature)
     ChefSpec::Matchers::ResourceMatcher.new(:sprout_base_bash_it_enable_feature, :create, feature)

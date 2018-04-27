@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 action :create do
   type, name = new_resource.name.split('/')
 

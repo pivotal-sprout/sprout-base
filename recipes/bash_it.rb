@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 bash_it_version = node['versions']['bash_it']
 
 git "#{Chef::Config[:file_cache_path]}/bash_it" do
